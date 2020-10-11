@@ -1,0 +1,10 @@
+{
+    code: "seedbag",
+    class: "SeedBag",
+    creativeinventory: {
+      "general": ["*"]
+    },
+    texture: {
+      base: "item/seedbag"
+    }
+  }

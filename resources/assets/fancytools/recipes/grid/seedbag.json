@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "S S	L L	 L ",
+	width: 3,
+	height: 3,
+	ingredients: {
+		"L": { type: "item", code: "game:flaxtwine"},
+		"S": { type: "item", code: "game:stick"}
+	},
+	output: { type: "item", code: "testmod:SeedBag"}
+}

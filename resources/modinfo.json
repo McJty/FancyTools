@@ -1,0 +1,13 @@
+{
+	"type": "code",
+	"name": "Fancy Tools",
+	"modid": "fancytools",
+	"version": "1.0.0",
+	
+	"description" : "Various useful tools",
+	"authors": [ "McJty" ],
+	
+	"dependencies": {
+		"game": "1.13.0"
+	}
+}
