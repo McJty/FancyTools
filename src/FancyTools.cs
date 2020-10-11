@@ -2,8 +2,8 @@
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 
-[assembly: ModInfo("testmod",
-	Description = "Test Mod",
+[assembly: ModInfo("fancytools",
+	Description = "Fancy Tools",
 	Authors     = new []{ "McJty" })]
 
 
@@ -17,7 +17,7 @@ namespace FancyTools {
 
         public override void Start(ICoreAPI api) {
             base.Start(api);
-			api.RegisterBlockBehaviorClass(TestBehavior.NAME, typeof(TestBehavior));
+			// api.RegisterBlockBehaviorClass(TestBehavior.NAME, typeof(TestBehavior));
             api.RegisterItemClass(SeedBag.NAME, typeof(SeedBag));
 
             // EntityPlayer.TryGiveItemStack();
