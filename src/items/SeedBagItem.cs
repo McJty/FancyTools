@@ -124,7 +124,7 @@ namespace FancyTools
                 new WorldInteraction
                 {
                     HotKeyCode = "sneak",
-                    ActionLangCode = "testmod:heldhelp-gui",
+                    ActionLangCode = "fancytools:heldhelp-gui",
                     MouseButton = EnumMouseButton.Right
                 },
                 new WorldInteraction

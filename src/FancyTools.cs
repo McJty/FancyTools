@@ -20,6 +20,9 @@ namespace FancyTools {
 			// api.RegisterBlockBehaviorClass(TestBehavior.NAME, typeof(TestBehavior));
             api.RegisterItemClass(SeedBagItem.NAME, typeof(SeedBagItem));
             api.RegisterItemClass(SpadeItem.NAME, typeof(SpadeItem));
+
+            // EntityPlayer player;
+            // player.TryGiveItemStack()
         }
 
         public override void StartClientSide(ICoreClientAPI api)
