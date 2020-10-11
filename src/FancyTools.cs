@@ -18,9 +18,8 @@ namespace FancyTools {
         public override void Start(ICoreAPI api) {
             base.Start(api);
 			// api.RegisterBlockBehaviorClass(TestBehavior.NAME, typeof(TestBehavior));
-            api.RegisterItemClass(SeedBag.NAME, typeof(SeedBag));
-
-            // EntityPlayer.TryGiveItemStack();
+            api.RegisterItemClass(SeedBagItem.NAME, typeof(SeedBagItem));
+            api.RegisterItemClass(SpadeItem.NAME, typeof(SpadeItem));
         }
 
         public override void StartClientSide(ICoreClientAPI api)

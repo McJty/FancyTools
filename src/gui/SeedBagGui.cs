@@ -53,7 +53,7 @@ namespace FancyTools
         public override void OnBeforeRenderFrame3D(float deltaTime)
         {
             base.OnBeforeRenderFrame3D(deltaTime);
-            if (slotGrid.Itemstack is null || !(slotGrid.Itemstack.Item is SeedBag))
+            if (slotGrid.Itemstack is null || !(slotGrid.Itemstack.Item is SeedBagItem))
             {
                 TryClose();
             }

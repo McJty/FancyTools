@@ -1,5 +1,5 @@
 {
-	ingredientPattern: "S S	L L	 L ",
+	ingredientPattern: "S S,L L, L ",
 	width: 3,
 	height: 3,
 	ingredients: {

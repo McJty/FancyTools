@@ -8,7 +8,7 @@ using Vintagestory.API.Server;
 namespace FancyTools
 {
 
-    public class SeedBag : Item
+    public class SeedBagItem : Item
     {
 
         public static string NAME { get; } = "SeedBag";

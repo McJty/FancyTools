@@ -1,0 +1,10 @@
+{
+    code: "spade",
+    class: "Spade",
+    creativeinventory: {
+      "general": ["*"]
+    },
+    texture: {
+      base: "item/spade"
+    }
+  }

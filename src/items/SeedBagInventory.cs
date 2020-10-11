@@ -24,7 +24,7 @@ namespace FancyTools
 
         public void SyncToSeedBag()
         {
-            if (seedBagSlot.Itemstack != null && seedBagSlot.Itemstack.Item is SeedBag)
+            if (seedBagSlot.Itemstack != null && seedBagSlot.Itemstack.Item is SeedBagItem)
             {
                 for (int i = 0; i < 8; i++)
                 {
@@ -39,7 +39,7 @@ namespace FancyTools
 
         internal void SyncFromSeedBag()
         {
-            if (seedBagSlot.Itemstack != null && seedBagSlot.Itemstack.Item is SeedBag)
+            if (seedBagSlot.Itemstack != null && seedBagSlot.Itemstack.Item is SeedBagItem)
             {
                 for (int i = 0; i < 8; i++)
                 {
