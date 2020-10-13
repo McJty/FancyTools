@@ -1,4 +1,5 @@
 using Vintagestory.API.Common;
+using Vintagestory.API.Common.Entities;
 
 namespace FancyTools
 {
@@ -8,6 +9,11 @@ namespace FancyTools
 
         public static string NAME { get; } = "Spade";
 
+        public override bool OnBlockBrokenWith(IWorldAccessor world, Entity byEntity, ItemSlot itemslot, BlockSelection blockSel)
+        {
+            
+            return base.OnBlockBrokenWith(world, byEntity, itemslot, blockSel);
+        }
 
     }
 }
