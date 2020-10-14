@@ -1,6 +1,6 @@
 {
     code: "seedbag",
-    class: "SeedBag",
+    class: "fancytools.SeedBag",
     creativeinventory: {
       "general": ["*"]
     },

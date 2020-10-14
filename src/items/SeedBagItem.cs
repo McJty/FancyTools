@@ -11,7 +11,7 @@ namespace FancyTools
     public class SeedBagItem : Item
     {
 
-        public static string NAME { get; } = "SeedBag";
+        public static string NAME { get; } = "fancytools.SeedBag";
 
         public override void OnHeldIdle(ItemSlot slot, EntityAgent byEntity)
         {
@@ -34,6 +34,14 @@ namespace FancyTools
             handling = EnumHandHandling.Handled;
         }
 
+        public static SeedBagInventory createInventory(ICoreAPI api, ItemSlot slot)
+        {
+            SeedBagInventory inventory = new SeedBagInventory("fancytools.seedbagInv", "id", api, slot);
+            inventory.SyncFromSeedBag();
+            inventory.ResolveBlocksOrItems();
+            return inventory;
+        }
+
         private void TryPlacingSeeds(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel)
         {
             if (blockSel == null) return;
@@ -42,8 +50,7 @@ namespace FancyTools
 
             BlockPos pos = blockSel.Position;
 
-            SeedBagInventory inventory = new SeedBagInventory("seedbagInv", "id", api, slot);
-            inventory.SyncFromSeedBag();
+            SeedBagInventory inventory = createInventory(api, slot);
 
             for (int x = -1 ; x <= 1 ; x++)
             {
@@ -73,9 +80,7 @@ namespace FancyTools
 
         private void OpenSeedBagGui(ItemSlot slot, EntityAgent byEntity)
         {
-            SeedBagInventory inventory = new SeedBagInventory("seedbagInv", "id", api, slot);
-            inventory.SyncFromSeedBag();
-            inventory.ResolveBlocksOrItems();
+            SeedBagInventory inventory = createInventory(api, slot);
             inventory.OnInventoryClosed += OnCloseInventory;
             IPlayer player = (byEntity as EntityPlayer).Player;
 

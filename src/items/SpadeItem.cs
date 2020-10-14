@@ -7,7 +7,7 @@ namespace FancyTools
     public class SpadeItem : Item
     {
 
-        public static string NAME { get; } = "Spade";
+        public static string NAME { get; } = "fancytools.Spade";
 
         public override bool OnBlockBrokenWith(IWorldAccessor world, Entity byEntity, ItemSlot itemslot, BlockSelection blockSel)
         {

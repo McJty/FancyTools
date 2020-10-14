@@ -1,7 +1,23 @@
 {
     "version": "0.2.0",
-    "configurations": [{
-      "name": "Launch Client",
+    "configurations": [
+      {
+        "name": "Launch Client (clr)",
+        "type": "clr",
+        "request": "launch",
+        "preLaunchTask": "build (Debug)",
+        "program": "${env:VINTAGE_STORY}/Vintagestory.exe",
+        "args": [
+          "--playstyle", "surviveandbuild",
+          "--openWorld", "modding test world",
+          "--addOrigin", "${workspaceFolder}/resources/assets"
+        ],
+        "console": "internalConsole",
+        "internalConsoleOptions": "openOnSessionStart",
+      }
+      ,
+      {
+      "name": "Launch Client (mono)",
       "type": "mono",
       "request": "launch",
       "preLaunchTask": "build (Debug)",
@@ -13,6 +29,7 @@
       ],
       "console": "internalConsole",
       "internalConsoleOptions": "openOnSessionStart",
-    }]
+    }
+    ]
   }
   

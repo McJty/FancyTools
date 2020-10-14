@@ -1,14 +1,13 @@
 {
 	"editor": {
 		"allAngles": false,
-		"singleTexture": false
+		"entityTextureMode": false
 	},
 	"textureWidth": 16,
 	"textureHeight": 16,
+	"textureSizes": {
+	},
 	"textures": {
-		"material": "game:block/stone/rock/andesite1",
-		"string": "game:item/tool/material/string",
-		"handle": "game:item/tool/material/handle"
 	},
 	"elements": [
 		{
@@ -175,17 +174,17 @@
 					"children": [
 						{
 							"name": "Blade base 1",
-							"from": [ -0.5, 0.2, -1.0 ], 
-							"to": [ 5.0, 0.7, 1.0 ], 
-							"rotationOrigin": [ 1.0, 0.2, 1.5 ],
+							"from": [ -0.5, 0.2, -2.0 ], 
+							"to": [ 5.5, 0.7, 1.0 ], 
+							"rotationOrigin": [ 1.0, 0.2, 0.5 ],
 							"rotationX": 4.0,
 							"faces": {
-								"north": { "texture": "#material", "uv": [ 1.0, 5.0, 6.5, 5.5 ] },
-								"east": { "texture": "#material", "uv": [ 2.0, 5.0, 4.0, 5.5 ] },
-								"south": { "texture": "#material", "uv": [ 2.0, 7.0, 7.5, 7.5 ] },
-								"west": { "texture": "#material", "uv": [ 2.0, 6.0, 4.0, 6.5 ] },
-								"up": { "texture": "#material", "uv": [ 7.0, 7.5, 9.0, 13.0 ], "rotation": 90 },
-								"down": { "texture": "#material", "uv": [ 4.5, 8.5, 10.0, 10.5 ] }
+								"north": { "texture": "#material", "uv": [ 1.0, 5.0, 7.0, 5.5 ] },
+								"east": { "texture": "#material", "uv": [ 2.0, 5.0, 5.0, 5.5 ] },
+								"south": { "texture": "#material", "uv": [ 2.0, 7.0, 8.0, 7.5 ] },
+								"west": { "texture": "#material", "uv": [ 2.0, 6.0, 5.0, 6.5 ] },
+								"up": { "texture": "#material", "uv": [ 7.0, 7.5, 10.0, 13.5 ], "rotation": 90 },
+								"down": { "texture": "#material", "uv": [ 4.5, 8.5, 10.5, 11.5 ] }
 							},
 							"children": [
 								{
@@ -207,23 +206,23 @@
 						{
 							"name": "Blade base 2",
 							"from": [ -0.5, 0.2, 0.9 ], 
-							"to": [ 5.0, 0.7, 2.9 ], 
+							"to": [ 5.5, 0.7, 3.9 ], 
 							"rotationOrigin": [ 1.0, 0.2, 1.0 ],
 							"rotationX": -4.0,
 							"faces": {
-								"north": { "texture": "#material", "uv": [ 1.0, 5.0, 6.5, 5.5 ] },
-								"east": { "texture": "#material", "uv": [ 2.0, 5.0, 4.0, 5.5 ] },
-								"south": { "texture": "#material", "uv": [ 2.0, 7.0, 7.5, 7.5 ] },
-								"west": { "texture": "#material", "uv": [ 2.0, 6.0, 4.0, 6.5 ] },
-								"up": { "texture": "#material", "uv": [ 2.0, 9.5, 4.0, 15.0 ], "rotation": 90 },
-								"down": { "texture": "#material", "uv": [ 3.0, 3.0, 8.5, 5.0 ] }
+								"north": { "texture": "#material", "uv": [ 1.0, 5.0, 7.0, 5.5 ] },
+								"east": { "texture": "#material", "uv": [ 2.0, 5.0, 5.0, 5.5 ] },
+								"south": { "texture": "#material", "uv": [ 2.0, 7.0, 8.0, 7.5 ] },
+								"west": { "texture": "#material", "uv": [ 2.0, 6.0, 5.0, 6.5 ] },
+								"up": { "texture": "#material", "uv": [ 2.0, 9.5, 5.0, 15.5 ], "rotation": 90 },
+								"down": { "texture": "#material", "uv": [ 3.0, 3.0, 9.0, 6.0 ] }
 							},
 							"children": [
 								{
 									"name": "Cube1",
-									"from": [ 1.0, 0.0, 2.0 ], 
-									"to": [ 5.0, 0.5, 2.5 ], 
-									"rotationOrigin": [ 1.0, 0.0, 2.0 ],
+									"from": [ 1.0, 0.0, 3.0 ], 
+									"to": [ 5.0, 0.5, 3.5 ], 
+									"rotationOrigin": [ 1.0, 0.0, 3.0 ],
 									"faces": {
 										"north": { "texture": "#material", "uv": [ 0.0, 0.0, 4.0, 0.5 ] },
 										"east": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },

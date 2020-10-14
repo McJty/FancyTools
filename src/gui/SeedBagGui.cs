@@ -33,7 +33,7 @@ namespace FancyTools
         {
             // Auto-sized dialog at the center of the screen
             ElementBounds dialogBounds = ElementStdBounds.AutosizedMainDialog.WithAlignment(EnumDialogArea.CenterMiddle);
-            ElementBounds invBounds = ElementBounds.Fixed(0, 40, 300, 120);
+            ElementBounds invBounds = ElementBounds.Fixed(0, 40, 250, 120);
 
             // Background boundaries. Again, just make it fit it's child elements, then add the text as a child element
             ElementBounds bgBounds = ElementBounds.Fill.WithFixedPadding(GuiStyle.ElementToDialogPadding);
@@ -43,9 +43,7 @@ namespace FancyTools
             // Lastly, create the dialog
             SingleComposer = capi.Gui.CreateCompo("SeedBagDialog", dialogBounds)
                 .AddDialogTitleBar("Seed Bag", OnTitleBarClose)
-                .AddShadedDialogBG(bgBounds);
-
-            SingleComposer
+                .AddShadedDialogBG(bgBounds)
                 .AddItemSlotGrid(inventory, SendInvPacket, 4, invBounds)
                 .Compose();
         }

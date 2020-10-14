@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
-using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 
 [assembly: ModInfo("fancytools",
-	Description = "Fancy Tools",
-	Authors     = new []{ "McJty" })]
+    Description = "Fancy Tools",
+    Authors = new[] { "McJty" })]
 
 
-namespace FancyTools {
+namespace FancyTools
+{
 
     public class FancyTools : ModSystem {
 
@@ -18,16 +18,10 @@ namespace FancyTools {
         public override void Start(ICoreAPI api) {
             base.Start(api);
 			// api.RegisterBlockBehaviorClass(TestBehavior.NAME, typeof(TestBehavior));
+            api.RegisterBlockEntityClass("FancyMold", typeof(BlockEntityFancyMold));
+
             api.RegisterItemClass(SeedBagItem.NAME, typeof(SeedBagItem));
             api.RegisterItemClass(SpadeItem.NAME, typeof(SpadeItem));
-
-            // EntityPlayer player;
-            // player.TryGiveItemStack()
-        }
-
-        public override void StartClientSide(ICoreClientAPI api)
-        {
-            base.StartClientSide(api);
         }
     }
     

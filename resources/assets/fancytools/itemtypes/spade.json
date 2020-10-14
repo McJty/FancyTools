@@ -1,6 +1,6 @@
   {
     code: "spade",
-    class: "Spade",
+    class: "fancytools.Spade",
     attributes: {
       handbook: {
         groupBy: ["spade-*"]

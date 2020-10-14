@@ -1,3 +1,4 @@
+using System;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.GameContent;
@@ -20,6 +21,46 @@ namespace FancyTools
         protected override ItemSlot NewSlot(int index)
         {
             return new ItemSlotSeeds(this);
+        }
+
+        /**
+         * Place this itemstack in the inventory. The stackSize of the parameter will be modified
+         * If it is 0 everything is placed.
+         */
+        public void PlaceItemStack(ItemStack stack)
+        {
+            // First find a slot that has the same seed and still has room
+            foreach (ItemSlot slot in slots)
+            {
+                if (slot.Itemstack != null)
+                {
+                    if (slot.Itemstack.Item == stack.Item)
+                    {
+                        int remaining = slot.Itemstack.Item.MaxStackSize - slot.Itemstack.StackSize;
+                        int tomove = Math.Min(remaining, stack.StackSize);
+                        if (tomove > 0)
+                        {
+                            slot.Itemstack.StackSize += tomove;
+                            stack.StackSize -= tomove;
+                        }
+                    }
+                    if (stack.StackSize <= 0)
+                    {
+                        return;
+                    }
+                }
+            }
+
+            // Otherwise find an empty slot
+            foreach (ItemSlot slot in slots)
+            {
+                if (slot.Itemstack == null)
+                {
+                    slot.Itemstack = stack.Clone();
+                    stack.StackSize = 0;
+                    return;
+                }
+            }
         }
 
         public void SyncToSeedBag()
