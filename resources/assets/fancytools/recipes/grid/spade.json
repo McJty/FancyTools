@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "  P, S ,s  ",
+	width: 3,
+	height: 3,
+	ingredients: {
+		"P": { type: "item", code: "game:metalplate-copper"},
+		"S": { type: "item", code: "game:shovel-copper"},
+		"s": { type: "item", code: "game:stick"}
+	},
+	output: { type: "item", code: "fancytools:spade"}
+}

@@ -11,7 +11,7 @@ namespace FancyTools
     public class SeedBagItem : Item
     {
 
-        public static string NAME { get; } = "fancytools.SeedBag";
+        public static string NAME { get; } = "fancytools.seedbag";
 
         public override void OnHeldIdle(ItemSlot slot, EntityAgent byEntity)
         {
@@ -24,17 +24,14 @@ namespace FancyTools
             {
                 OpenSeedBagGui(slot, byEntity);
             }
-            else
+            else if (byEntity.World is IServerWorldAccessor)
             {
-                if (byEntity.World is IServerWorldAccessor)
-                {
-                    TryPlacingSeeds(slot, byEntity, blockSel);
-                }
+                TryPlacingSeeds(slot, byEntity, blockSel);
             }
             handling = EnumHandHandling.Handled;
         }
 
-        public static SeedBagInventory createInventory(ICoreAPI api, ItemSlot slot)
+        public static SeedBagInventory CreateInventory(ICoreAPI api, ItemSlot slot)
         {
             SeedBagInventory inventory = new SeedBagInventory("fancytools.seedbagInv", "id", api, slot);
             inventory.SyncFromSeedBag();
@@ -50,7 +47,7 @@ namespace FancyTools
 
             BlockPos pos = blockSel.Position;
 
-            SeedBagInventory inventory = createInventory(api, slot);
+            SeedBagInventory inventory = CreateInventory(api, slot);
 
             for (int x = -1 ; x <= 1 ; x++)
             {
@@ -80,7 +77,7 @@ namespace FancyTools
 
         private void OpenSeedBagGui(ItemSlot slot, EntityAgent byEntity)
         {
-            SeedBagInventory inventory = createInventory(api, slot);
+            SeedBagInventory inventory = CreateInventory(api, slot);
             inventory.OnInventoryClosed += OnCloseInventory;
             IPlayer player = (byEntity as EntityPlayer).Player;
 
@@ -134,7 +131,7 @@ namespace FancyTools
                 },
                 new WorldInteraction
                 {
-                    ActionLangCode = "heldhelp-plant",
+                    ActionLangCode = "fancytools:heldhelp-plant3",
                     MouseButton = EnumMouseButton.Right
                 }
 

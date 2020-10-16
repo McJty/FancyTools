@@ -17,7 +17,7 @@ namespace FancyTools
                 {
                     if (slot != null && slot.Itemstack != null && slot.Itemstack.Item is SeedBagItem)
                     {
-                        SeedBagInventory inventory = SeedBagItem.createInventory(__instance.Api, slot);
+                        SeedBagInventory inventory = SeedBagItem.CreateInventory(__instance.Api, slot);
                         inventory.PlaceItemStack(itemstack);
                         inventory.SyncToSeedBag();
                         if (itemstack.StackSize <= 0)

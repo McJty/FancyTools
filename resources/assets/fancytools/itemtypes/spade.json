@@ -1,235 +1,37 @@
   {
     code: "spade",
-    class: "fancytools.Spade",
+    class: "fancytools.spade",
     attributes: {
-      handbook: {
-        groupBy: ["spade-*"]
-      },
       toolrackTransform: {
         rotation: { y: 1, z: -1 },
         translation: { x: -0.47, y: 0.6 },
         scale: 1.25,
       }
     },
-    variantgroups: [
-      { code: "material", states: ["granite", "andesite", "basalt", "obsidian", "peridotite", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
-    ],
     damagedby: ["blockbreaking", "attacking"],
-    shapeByType: {
-      "spade-granite": { base: "item/spade" },
-      "spade-andesite": { base: "item/spade" },
-      "spade-basalt": { base: "item/spade" },
-      "spade-obsidian": { base: "item/spade" },
-      "spade-peridotite": { base: "item/spade" },
-      "spade-flint": { base: "item/spade" },
-      "spade-copper": { base: "item/spade" },
-      "spade-tinbronze": { base: "item/spade" },
-      "spade-bismuthbronze": { base: "item/spade" },
-      "spade-blackbronze": { base: "item/spade" },
-      "spade-gold": { base: "item/spade" },
-      "spade-silver": { base: "item/spade" },
-      "spade-iron": { base: "item/spade" },
+    shape: {
+      base: "item/spade"
     },
+
     heldTpHitAnimation: "shoveldig",
-    texturesByType: {
-      "spade-flint": {
-        "material": { base: "game:item/tool/material/{material}" },
-      },
-      "spade-granite": {
-        "material": { base: "game:block/stone/rock/{material}1" },
-      },
-      "spade-andesite": {
-        "material": { base: "game:block/stone/rock/{material}1" },
-      },
-      "spade-basalt": {
-        "material": { base: "game:block/stone/rock/{material}1" },
-      },
-      "spade-obsidian": {
-        "material": { base: "game:block/stone/rock/{material}1" },
-      },
-      "spade-peridotite": {
-        "material": { base: "game:block/stone/rock/{material}1" },
-      },
-      "*": {
-        "material": { base: "game:block/metal/ingot/{material}" },
-      },
+    texture: {
+      base: "game:item/tool/material/copper",
+      string: {base: "game:item/tool/material/copper"},
+      handle: {base: "game:item/tool/material/copper"},
+      material: {base: "game:item/tool/material/copper"}
     },
-    miningspeedbytype: {
-      "spade-granite": {
-        "soil": 2.2,
-        "sand": 2.2,
-        "gravel": 1.9,
-        "snow": 1.9
-      },
-      "spade-peridotite": {
-        "soil": 2.2,
-        "sand": 2.2,
-        "gravel": 1.9,
-        "snow": 1.9
-      },
-      "spade-andesite": {
-        "soil": 2.2,
-        "sand": 2.2,
-        "gravel": 1.9,
-        "snow": 1.9
-      },
-      "spade-basalt": {
-        "soil": 2.2,
-        "sand": 2.2,
-        "gravel": 1.9,
-        "snow": 1.9
-      },
-      "spade-obsidian": {
-        "soil": 3,
-        "sand": 3,
-        "gravel": 2.2,
-        "snow": 2.2
-      },
-  
-      "spade-flint": {
-        "soil": 2.5,
-        "sand": 2.5,
-        "gravel": 2.1,
-        "snow": 2.1
-      },
-      "spade-copper": {
-        "soil": 4,
-        "sand": 4,
-        "gravel": 2.6,
-        "snow": 2.6
-      },
-      "spade-bismuthbronze": {
-        "soil": 5,
-        "sand": 5,
-        "gravel": 3.2,
-        "snow": 3.2
-      },
-      "spade-tinbronze": {
-        "soil": 5.4,
-        "sand": 5.4,
-        "gravel": 3.6,
-        "snow": 3.6
-      },
-      "spade-gold": {
-        "soil": 5.4,
-        "sand": 5.4,
-        "gravel": 3.6,
-        "snow": 3.6
-      },
-      "spade-silver": {
-        "soil": 5.4,
-        "sand": 5.4,
-        "gravel": 3.6,
-        "snow": 3.6
-      },
-      "spade-blackbronze": {
-        "soil": 5.5,
-        "sand": 5.5,
-        "gravel": 3.7,
-        "snow": 3.7
-      },
-      "spade-iron": {
-        "soil": 6,
-        "sand": 6,
-        "gravel": 4,
-        "snow": 4
-      },
-      "spade-steel": {
-        "soil": 7,
-        "sand": 7,
-        "gravel": 4.4,
-        "snow": 4.4
-      },
-    },
-    attackpowerbytype: {
-      "spade-granite": 0.75,
-      "spade-andesite": 0.75,
-      "spade-peridotite": 0.75,
-      "spade-basalt": 0.75,
-      "spade-obsidian": 1.25,
-      
-      "spade-flint": 1,
-      "spade-copper": 1.25,
-      "spade-gold": 1.5,
-      "spade-silver": 1.5,
-      "spade-bismuthbronze": 1.5,
-      "spade-tinbronze": 1.75,
-      "spade-blackbronze": 2,
-      "spade-iron": 2.25,
-      "spade-steel": 2.5,
-    },
-    durabilitybytype: {
-      "spade-granite": 60,
-      "spade-peridotite": 60,
-      "spade-andesite": 60,
-      "spade-basalt": 60,
-      "spade-flint": 90,
-      "spade-obsidian": 100,
-      
-      "spade-gold": 200,
-      "spade-silver": 200,
-      "spade-copper": 400,
-      "spade-tinbronze": 600,
-      "spade-bismuthbronze": 650,
-      "spade-blackbronze": 700,
-      "spade-iron": 1200,
-      "spade-steel": 1600,
-    },
+
     creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
     fpHandTransform: {
       translation: { x: 0.046875, y: -0.2, z: 0 },
       rotation: { x: -15, y: 15, z: 100 },
       scale: 2
     },
-    guiTransformByType: {
-      "spade-copper": {
-        translation: { x: 7, y: 0, z: 1 },
-        rotation: { x: -112, y: -147, z: 139 },
-        origin: { x: 0.4, y: 0.7, z: 0.7 },
-        scale: 1.05
-      },
-      "spade-tinbronze": {
-        translation: { x: 7, y: 0, z: 1 },
-        rotation: { x: -112, y: -147, z: 139 },
-        origin: { x: 0.4, y: 0.7, z: 0.7 },
-        scale: 1.05
-      },
-      "spade-bismuthbronze": {
-        translation: { x: 7, y: 0, z: 1 },
-        rotation: { x: -112, y: -147, z: 139 },
-        origin: { x: 0.4, y: 0.7, z: 0.7 },
-        scale: 1.05
-      },
-      "spade-blackbronze": {
-        translation: { x: 7, y: 0, z: 1 },
-        rotation: { x: -112, y: -147, z: 139 },
-        origin: { x: 0.4, y: 0.7, z: 0.7 },
-        scale: 1.05
-      },
-      "spade-iron": {
-        translation: { x: 7, y: 0, z: 1 },
-        rotation: { x: -112, y: -147, z: 139 },
-        origin: { x: 0.4, y: 0.7, z: 0.7 },
-        scale: 1.05
-      },
-      "spade-silver": {
-        translation: { x: 7, y: 0, z: 1 },
-        rotation: { x: -112, y: -147, z: 139 },
-        origin: { x: 0.4, y: 0.7, z: 0.7 },
-        scale: 1.05
-      },
-      "spade-gold": {
-        translation: { x: 7, y: 0, z: 1 },
-        rotation: { x: -112, y: -147, z: 139 },
-        origin: { x: 0.4, y: 0.7, z: 0.7 },
-        scale: 1.05
-      },
-      "*": {
+    guiTransform: {
       translation: { x: 7, y: 0, z: 1 },
       rotation: { x: -112, y: -147, z: 139 },
-      origin: { x: 0.3, y: 0.7, z: 0.7 },
-      scale: 1.18
-      }
+      origin: { x: 0.4, y: 0.7, z: 0.7 },
+      scale: 1.05
     },
     groundTransform: {
       translation: { x: 0, y: 0, z: 0 },

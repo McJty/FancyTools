@@ -18,7 +18,7 @@ namespace FancyTools
         public override void Start(ICoreAPI api) {
             base.Start(api);
 			// api.RegisterBlockBehaviorClass(TestBehavior.NAME, typeof(TestBehavior));
-            api.RegisterBlockEntityClass("FancyMold", typeof(BlockEntityFancyMold));
+            // api.RegisterBlockEntityClass("FancyMold", typeof(BlockEntityFancyMold));
 
             api.RegisterItemClass(SeedBagItem.NAME, typeof(SeedBagItem));
             api.RegisterItemClass(SpadeItem.NAME, typeof(SpadeItem));

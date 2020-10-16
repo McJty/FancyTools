@@ -1,6 +1,11 @@
 {
     "item-seedbag": "Seed Bag",
     "item-spade": "Spade",
+    "itemdesc-seedbag": "This is a bag that can hold seeds. You can open its GUI by right clicking it. Right clicking it on farmland will plant the seeds in a 3x3 area. If in your hotbar it will also automatically pick up seeds that you harvest",
+    "itemdesc-spade": "With this tool you can pick up one block of farmland and place it elsewhere while preserving the stats it has",
 
-    "heldhelp-gui": "Open GUI"
+    "heldhelp-gui": "Open GUI",
+    "heldhelp-plant3": "Plant 3x3",
+    "heldhelp-pickupfarm": "Pick up farmland",
+    "heldhelp-placefarm": "Place farmland"
 }

@@ -6,5 +6,5 @@
 		"L": { type: "item", code: "game:flaxtwine"},
 		"S": { type: "item", code: "game:stick"}
 	},
-	output: { type: "item", code: "fancytools:SeedBag"}
+	output: { type: "item", code: "fancytools:seedbag"}
 }
