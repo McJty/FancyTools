@@ -38,6 +38,9 @@ namespace FancyTools
             BlockEntity blockEntity = byEntity.World.BlockAccessor.GetBlockEntity(pos);
             if (blockEntity is BlockEntityFarmland)
             {
+                treeAttributes.SetInt("posx", pos.X);
+                treeAttributes.SetInt("posy", pos.Y);
+                treeAttributes.SetInt("posz", pos.Z);
                 blockEntity.FromTreeAtributes(treeAttributes, byEntity.World);
                 blockEntity.MarkDirty();
             }
@@ -58,12 +61,13 @@ namespace FancyTools
                     slot.Itemstack.Attributes["farmland"] = tree;
                     slot.Itemstack.Attributes.SetInt("farmId", byEntity.World.BlockAccessor.GetBlock(blockSel.Position).Id);
                     byEntity.World.BlockAccessor.SetBlock(0, blockSel.Position);
-                    BlockPos cropPos = blockSel.Position.AddCopy(0, 1, 0);
-                    Block seedBlock = byEntity.World.BlockAccessor.GetBlock(cropPos);
-                    if (seedBlock is BlockCrop)
-                    {
-                        byEntity.World.BlockAccessor.BreakBlock(cropPos, byEntity as IPlayer);
-                    }
+                    // BlockPos cropPos = blockSel.Position.AddCopy(0, 1, 0);
+                    byEntity.World.BlockAccessor.TriggerNeighbourBlockUpdate(blockSel.Position);
+                    // Block seedBlock = byEntity.World.BlockAccessor.GetBlock(cropPos);
+                    // if (seedBlock is BlockCrop)
+                    // {
+                        // byEntity.World.BlockAccessor.BreakBlock(cropPos, byEntity as IPlayer);
+                    // }
                     slot.MarkDirty();
                 }
             }
