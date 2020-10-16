@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "modid": "fancytools",
+    "name": "Fancy Tools",
+    "description" : "Fancy Tools provides all kinds of nice and balanced tools",
+    "authors": ["McJty"],
+    "version": "0.1",
+    "dependencies": { 
+      "game": "1.13.3",
+      "survival": "1.13.3"
+    },
+    "website": "https://github.com/McJty/FancyTools"
+  }
