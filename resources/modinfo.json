@@ -4,7 +4,7 @@
     "name": "Fancy Tools",
     "description" : "Fancy Tools provides all kinds of nice and balanced tools",
     "authors": ["McJty"],
-    "version": "0.1",
+    "version": "0.2",
     "dependencies": { 
       "game": "1.13.3",
       "survival": "1.13.3"
