@@ -41,7 +41,7 @@ namespace FancyTools
                 treeAttributes.SetInt("posx", pos.X);
                 treeAttributes.SetInt("posy", pos.Y);
                 treeAttributes.SetInt("posz", pos.Z);
-                blockEntity.FromTreeAtributes(treeAttributes, byEntity.World);
+                blockEntity.FromTreeAttributes(treeAttributes, byEntity.World);
                 blockEntity.MarkDirty();
             }
             slot.Itemstack.Attributes.RemoveAttribute("farmland");
